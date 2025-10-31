@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MANGKAT — SHORT FILM</title>
+
+<!-- Fonts & Tailwind -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+:root {
+  --bg: #0b0b0b;
+  --text: #eaeaea;
+  --accent: #d4af37; /* subtle gold accent */
+}
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, sans-serif;
+  margin: 0;
+  letter-spacing: 0.01em;
+}
+.title-serif {
+  font-family: 'Playfair Display', serif;
+}
+.still {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(100%) brightness(0.8);
+  transition: all 0.3s ease;
+}
+.still:hover {
+  filter: grayscale(0%) brightness(1);
+  transform: scale(1.02);
+}
+.fade {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+.fade:hover {
+  opacity: 1;
+}
+</style>
+</head>
+
+<body class="min-h-screen flex items-center justify-center p-6">
+  <main class="max-w-5xl w-full space-y-12">
+    
+    <!-- Video -->
+    <div class="aspect-video overflow-hidden rounded-2xl shadow-xl">
+      <iframe 
+        src="https://drive.google.com/file/d/1lI1RmOROE_SxnDR_xVktsEv5Qs1uwsmS/preview" 
+        frameborder="0" 
+        allow="autoplay; fullscreen" 
+        allowfullscreen 
+        class="w-full h-full">
+      </iframe>
+    </div>
+
+    <!-- Still Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-3">
+      <img src="../assets/stills/still11.jpg" alt="" class="still rounded-lg">
+      <img src="../assets/stills/still12.jpg" alt="" class="still rounded-lg">
+      <img src="../assets/stills/still13.jpg" alt="" class="still rounded-lg">
+      <img src="../assets/stills/still14.jpg" alt="" class="still rounded-lg">
+      <img src="../assets/stills/still15.jpg" alt="" class="still rounded-lg">
+      <img src="../assets/stills/still16.jpg" alt="" class="still rounded-lg">
+    </div>
+
+    <!-- Caption / Credits -->
+    <section class="text-center space-y-3 max-w-3xl mx-auto">
+      <h1 class="title-serif text-3xl md:text-4xl font-semibold tracking-tight">MANGKAT (2025)</h1>
+      <p class="text-sm md:text-base text-gray-300 leading-relaxed fade">
+       Rian, a college student from Lampung, travels to Bandung with three other passengers in a shuttle car. Along the way, tensions rise when the car breaks down. In the midst of the situation, they begin to open up about their experiences of leaving home, their different backgrounds, and their individual perspectives while trying to find a way to continue the journey.
+      </p>
+
+      <div class="pt-6 text-xs uppercase tracking-widest text-gray-400 space-y-1">
+        <p><span class="text-[var(--accent)]">Directed by</span> Zainal Ferdiansyah</p>
+        <p><span class="text-[var(--accent)]">Cinematography</span> Lazuardi Fajar Ramadhan</p>
+        <p><span class="text-[var(--accent)]">Editor</span> Atha Sahila</p>
+        <p><span class="text-[var(--accent)]">Produced by</span> All of Us</p>
+        <p><span class="text-[var(--accent)]">Gaffer</span> Irwan Sayid Hudaya</p>
+      </div>
+
+      <div class="pt-4 text-xs tracking-wider text-gray-500">
+        <p>Length — 19 Minutes</p>
+        <p>Shot on Sony FX3</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
